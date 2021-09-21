@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMobileAds
 
-class NativeAdWrapper: UIView {
+@objc(NativeAdWrapper) public class NativeAdWrapper: UIView {
     
     private var nativeAdView: GADNativeAdView!
     private var nativeMediaView: GADMediaView!
@@ -66,7 +66,7 @@ class NativeAdWrapper: UIView {
 }
 
 extension NativeAdWrapper: GADNativeAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         print("AdmobAdView:didReceive")
         self.nativeAd = nativeAd
         self.nativeAd?.delegate = self
@@ -74,14 +74,14 @@ extension NativeAdWrapper: GADNativeAdLoaderDelegate {
         self.onAdLoaded?()
     }
     
-    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
         print("AdmobAdView:didFailToReceiveAdWithError")
         self.onAdLoadFailed?()
     }
 }
 
 extension NativeAdWrapper: GADNativeAdDelegate {
-    func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
+    public func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
         print("AdmobAdView:nativeAdDidRecordClick")
     }
 }
