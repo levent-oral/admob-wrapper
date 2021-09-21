@@ -13,6 +13,8 @@ class NativeAdWrapper: UIView {
     private var nativeAdView: GADNativeAdView!
     private var nativeMediaView: GADMediaView!
     
+    private var nativeAd: GADNativeAd? = nil
+    
     private var adRequest: GADRequest!
     private var adLoader: GADAdLoader!
     
@@ -44,6 +46,8 @@ class NativeAdWrapper: UIView {
         self.adLoader.load(self.adRequest)
     }
     
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
     private func setupView() {
         self.nativeAdView = GADNativeAdView(frame: self.frame)
         self.nativeAdView.isUserInteractionEnabled = false
@@ -73,5 +77,11 @@ extension NativeAdWrapper: GADNativeAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
         print("AdmobAdView:didFailToReceiveAdWithError")
         self.onAdLoadFailed?()
+    }
+}
+
+extension NativeAdWrapper: GADNativeAdDelegate {
+    func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
+        print("AdmobAdView:nativeAdDidRecordClick")
     }
 }

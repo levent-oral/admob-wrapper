@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		41047C6E26FA20BA00F7C337 /* admob_wrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41047C6D26FA20BA00F7C337 /* admob_wrapperTests.swift */; };
 		41047C7026FA20BA00F7C337 /* admob_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 41047C6226FA20BA00F7C337 /* admob_wrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41047C7A26FA24C900F7C337 /* NativeAdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41047C7926FA24C900F7C337 /* NativeAdWrapper.swift */; };
+		41AE95A226FA28D9006C8A5E /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AE95A126FA28D9006C8A5E /* GoogleMobileAds.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		41047C6D26FA20BA00F7C337 /* admob_wrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = admob_wrapperTests.swift; sourceTree = "<group>"; };
 		41047C6F26FA20BA00F7C337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41047C7926FA24C900F7C337 /* NativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdWrapper.swift; sourceTree = "<group>"; };
+		41AE95A126FA28D9006C8A5E /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = Carthage/Build/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AE95A226FA28D9006C8A5E /* GoogleMobileAds.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 				41047C6126FA20BA00F7C337 /* admob-wrapper */,
 				41047C6C26FA20BA00F7C337 /* admob-wrapperTests */,
 				41047C6026FA20BA00F7C337 /* Products */,
+				41AE95A026FA28D9006C8A5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +91,14 @@
 				41047C6F26FA20BA00F7C337 /* Info.plist */,
 			);
 			path = "admob-wrapperTests";
+			sourceTree = "<group>";
+		};
+		41AE95A026FA28D9006C8A5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AE95A126FA28D9006C8A5E /* GoogleMobileAds.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
