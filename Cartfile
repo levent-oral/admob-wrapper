@@ -1,0 +1,2 @@
+binary "https://prod-storyly-media.s3.eu-west-1.amazonaws.com/storyly-sdk/Carthage/Storyly.json"
+binary "Carthage/GoogleMobileAds.json"
