@@ -21,11 +21,11 @@ import GoogleMobileAds
     private var onAdLoaded: (() -> Void)? = nil
     private var onAdLoadFailed: (() -> Void)? = nil
     
-    init(frame: CGRect,
-         rootViewController: UIViewController,
-         adMobAdUnitId: String,
-         onAdLoaded: @escaping () -> Void,
-         onAdLoadFailed: @escaping () -> Void) {
+    public init(frame: CGRect,
+                rootViewController: UIViewController,
+                adMobAdUnitId: String,
+                onAdLoaded: @escaping () -> Void,
+                onAdLoadFailed: @escaping () -> Void) {
         super.init(frame: frame)
         
         self.onAdLoaded = onAdLoaded
